@@ -1,0 +1,112 @@
+/* General Table Styles */
+.user-list {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th {
+    text-align: left;
+    padding: 8px;
+    background-color: #f8f9fa;
+}
+
+td {
+    padding: 12px 8px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* Username Column */
+.username-column {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username span {
+    font-weight: bold;
+}
+
+/* Responsive Table Container */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+/* For Very Small Screens */
+@media (max-width: 480px) {
+
+    th,
+    td {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+
+/*Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pagination button:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+/* Small Screens Pagination */
+@media (max-width: 480px) {
+    .pagination button {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}

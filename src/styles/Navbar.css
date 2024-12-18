@@ -1,0 +1,124 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(31, 113, 208);
+    padding: 10px 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar-links li {
+    padding: 5px 10px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #b0c5d0;
+}
+
+/* Right-Aligned Login */
+.navbar-login {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-login li {
+    padding: 5px 10px;
+}
+
+.navbar-login a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-login a:hover {
+    color: #b0c5d0;
+}
+
+/* Responsive Navbar */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-center {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(31, 113, 208);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-center.open {
+        display: flex;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .navbar-links li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-login {
+        margin-top: 10px;
+    }
+
+    .navbar-login li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
